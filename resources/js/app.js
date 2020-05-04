@@ -1,5 +1,9 @@
 require('./bootstrap');
 
+global.$ = global.jQuery = require("jquery");
+
+require('jquery');
+require('bootstrap');
 
 //Script du Labs
 require('jquery/dist/jquery');
