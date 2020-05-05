@@ -12,3 +12,4 @@ require('magnific-popup/dist/jquery.magnific-popup');
 require('./owl.carousel.min.js');
 require('jquery-circle-progress/dist/circle-progress');
 require('./main');
+
