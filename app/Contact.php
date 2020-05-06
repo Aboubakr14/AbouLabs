@@ -4,7 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Browse extends Model
+class Contact extends Model
 {
-    //
+    protected $table = 'contact';
 }
+
