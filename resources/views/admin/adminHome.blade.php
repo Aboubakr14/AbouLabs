@@ -12,7 +12,7 @@
 
 @section('content')
     <div class="container">
-        <h3>Cette page est reservé a l'édition textuel de la page Home</h3>
+        <h3>Edition textuel de la page Home</h3>
         @if ($errors->any())
             <div class="alert alert-danger">
                 @foreach ($errors->all() as $error)
@@ -44,7 +44,7 @@
                 <textarea name="texte_droite" id="texte_droite" cols="30" rows="10" class="form-control">{{ isset($home) != null ? $home->texte_droite : ''}}</textarea>
             </div>
             <div class="form-group">
-                <label for="video">URL d'une video youtube (Il faudra juste copier le lien de la video)</label>
+                <label for="video">URL video youtube</label>
                 <input type="text" class="form-control" name="video" id="video" value="{{ isset($home) != null ? $home->url_video : ''}}" placeholder="https://www.youtube.com/..">
             </div>
             <button class="btn btn-success d-block mx-auto mb-5">Enregistrer</button>
