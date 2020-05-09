@@ -47,7 +47,7 @@
                 <label for="video">URL video youtube</label>
                 <input type="text" class="form-control" name="video" id="video" value="{{ isset($home) != null ? $home->url_video : ''}}" placeholder="https://www.youtube.com/..">
             </div>
-            <button class="btn btn-success d-block mx-auto mb-5">Enregistrer</button>
+            <button class="btn btn-success d-block mx-auto mb-5">Sauver</button>
         </form>
     </div>
 @stop

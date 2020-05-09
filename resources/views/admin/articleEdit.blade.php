@@ -40,7 +40,7 @@
                     <div class="col-6">
                         <span class="d-block mb-3">Tags</span>
                         @if (isset($tags) == null)
-                            <p>Il n'y pas de tags, aller en <a href="{{route('tags.create')}}">ajouter</a></p>
+                            <p>pas de tags, aller en <a href="{{route('tags.create')}}">créer</a></p>
                         @else
                             @foreach ($tags as $tag)
                                 <span class="d-flex">
@@ -60,7 +60,7 @@
                     <div class="col-6">
                         <span class="d-block mb-3">Catégorie</span>
                         @if (isset($categories) == null)
-                            <p>Il n'y pas de categories, aller en <a href="{{route('categories.create')}}">ajouter</a></p>
+                            <p>pas de categories, aller en <a href="{{route('categories.create')}}">créer</a></p>
                         @else
                             <select name="categorie" id="" class="form-control">
                                 @foreach ($categories as $categorie)
