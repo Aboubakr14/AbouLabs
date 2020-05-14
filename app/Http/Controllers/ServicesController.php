@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Service;
 use App\Http\Requests\ServiceRequest;
 
-class ServiceController extends Controller
+class ServicesController extends Controller
 {
     /**
      * Display a listing of the resource.
