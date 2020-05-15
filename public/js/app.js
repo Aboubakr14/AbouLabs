@@ -46896,13 +46896,7 @@ module.exports = function(module) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global) {__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
-
-global.$ = global.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-
-__webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-
-__webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.js"); //Script du Labs
+__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); //Script du Labs
 
 
 __webpack_require__(/*! jquery/dist/jquery */ "./node_modules/jquery/dist/jquery.js");
@@ -46915,8 +46909,26 @@ __webpack_require__(/*! ./owl.carousel.min.js */ "./resources/js/owl.carousel.mi
 
 __webpack_require__(/*! jquery-circle-progress/dist/circle-progress */ "./node_modules/jquery-circle-progress/dist/circle-progress.js");
 
-__webpack_require__(/*! ./main */ "./resources/js/main.js");
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../node_modules/webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+__webpack_require__(/*! ./main */ "./resources/js/main.js"); // substr()
+
+
+if (window.location.href == "http://127.0.0.1:8000/?page=1" || window.location.href == "http://127.0.0.1:8000/service?page=2" || window.location.href == "http://127.0.0.1:8000/?page=2" || window.location.href == "http://127.0.0.1:8000/service?page=1") {
+  window.location = '#service';
+}
+
+var contact = document.querySelector('#msg');
+var commentaire = document.querySelector('#com');
+var newsletter = document.querySelector('#newsletter');
+var close = document.querySelector('#close');
+if (contact != null) window.location = "#con_form";
+if (commentaire != null) window.location = "#com"; // if(newsletter != null)
+//     window.location = "#news"
+
+if (close != null) {
+  close.addEventListener('click', function () {
+    contact.classList.add('d-none');
+  });
+}
 
 /***/ }),
 
@@ -46950,17 +46962,30 @@ try {
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /**
+ * Next we will register the CSRF Token as a common header with Axios so that
+ * all outgoing HTTP requests automatically have it attached. This is just
+ * a simple convenience so we don't have to attach every token manually.
+ */
+
+var token = document.head.querySelector('meta[name="csrf-token"]');
+
+if (token) {
+  window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
+} else {
+  console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
+}
+/**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting
  * allows your team to easily build robust real-time web applications.
  */
-// import Echo from 'laravel-echo';
+// import Echo from 'laravel-echo'
 // window.Pusher = require('pusher-js');
 // window.Echo = new Echo({
 //     broadcaster: 'pusher',
 //     key: process.env.MIX_PUSHER_APP_KEY,
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
-//     forceTLS: true
+//     encrypted: true
 // });
 
 /***/ }),
