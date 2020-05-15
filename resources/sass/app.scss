@@ -6,3 +6,54 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+// @import './bootstrap.min.css';
+@import "./font-awesome.min.css";
+@import "./flaticon.css";
+@import "./magnific-popup.css";
+// @import "./owl.carousel.css";
+@import "./style.css";
+
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.logo{
+    font-size: 40px;
+}
+
+.intro{
+    background-color:rgba(255,255,255,0.5);
+    max-width: fit-content;
+    padding: 10px 50px;
+    margin: 0 auto;
+}
+
+.page-item.active{
+    .page-link{
+        background-color:#2be6ab !important;
+        border-color: #2be6ab !important;
+    }
+}
+
+#msg{
+    display: block;
+    position: fixed;
+    z-index: 5;
+    top: 50px;
+    left: 50px;
+}
+
+p,.service-text,.text{
+    word-break: break-word;
+}
+
+.member img{
+    max-height: 80%;
+    margin-bottom: 0 !important;
+}

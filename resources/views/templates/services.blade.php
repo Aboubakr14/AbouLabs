@@ -22,7 +22,7 @@
         </div>
         <div class="row">
             <div class="col-12 d-flex justify-content-center">
-                {{-- {{$services->links('vendor.pagination.bootstrap-4')}} --}}
+                {{$services->links('vendor.pagination.bootstrap-4')}}
             </div>
         </div>
         <div class="text-center">
