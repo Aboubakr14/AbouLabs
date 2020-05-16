@@ -27,7 +27,7 @@
         </div>
     @endif
 	<div class="map" id="map-area">
-        <iframe src="https://www.google.com/maps/place/Manneken+Pis/@50.844993,4.3478003,17z/data=!3m1!4b1!4m5!3m4!1s0x47c3c479195e3dd1:0x17b840a620b0c11f!8m2!3d50.844993!4d4.349989" width="1920" height="750" frameborder="0" allowfullscreen="" class="d-block img-fluid h-100"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2518.689591024362!2d4.341348215436429!3d50.855432159865444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c38c275028d3%3A0xc7799151146ebf77!2sMolenGeek!5e0!3m2!1sfr!2sbe!4v1570528410993!5m2!1sfr!2sbe" width="1920" height="750" frameborder="0" allowfullscreen="" class="d-block img-fluid h-100"></iframe>
     </div>
 @endsection
 
