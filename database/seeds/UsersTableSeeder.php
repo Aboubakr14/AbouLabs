@@ -20,19 +20,19 @@ class UsersTableSeeder extends Seeder
                 'name' => 'Abou',
                 'role' => 'admin',
                 'email' => 'labs@admin.com',
-                'password' => password_hash('58626682',PASSWORD_BCRYPT)
+                'password' => bcrypt('58626682')
             ],
             [
                 'name' => 'John Doe',
                 'role' => 'editeur',
                 'email' => 'albinotnoty@gmail.com',
-                'password' => password_hash('58626682',PASSWORD_BCRYPT)
+                'password' => bcrypt('58626682')
             ],
             [
                 'name' => 'John Guest',
                 'role' => 'guest',
                 'email' => 'john@guest.com',
-                'password' => password_hash('58626682',PASSWORD_BCRYPT)
+                'password' => bcrypt('58626682')
             ]
             ];
 
