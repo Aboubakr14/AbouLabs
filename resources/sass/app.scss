@@ -2,7 +2,9 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
 // Variables
-@import 'variables';
+// @import 'variables';
+
+
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
@@ -10,13 +12,16 @@
 @import "./font-awesome.min.css";
 @import "./flaticon.css";
 @import "./magnific-popup.css";
-// @import "./owl.carousel.css";
+$owl-image-path: "~owl.carousel/src/img/";
+@import '~owl.carousel/src/scss/owl.carousel';
+@import '~owl.carousel/src/scss/owl.theme.default';
 @import "./style.css";
 
 @import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "~@fortawesome/fontawesome-free/scss/brands";
 @import "~@fortawesome/fontawesome-free/scss/regular";
 @import "~@fortawesome/fontawesome-free/scss/solid";
+
 
 html {
     scroll-behavior: smooth;
