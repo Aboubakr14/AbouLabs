@@ -1,27 +1,44 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace App\Http\Requests;
 
-use Closure;
-use Auth;
+use Illuminate\Foundation\Http\FormRequest;
 
-class IsEditeur
+class ArticleRequest extends FormRequest
 {
     /**
-     * Handle an incoming request.
+     * Determine if the user is authorized to make this request.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
-     * @return mixed
+     * @return bool
      */
-    public function handle($request, Closure $next)
+    public function authorize()
     {
-        if(Auth::user()->role == "editeur"){
-            return $next($request);   
-        }
-        else if(Auth::user()->role != "editeur" && Auth::user()->role == "admin")
-            return $next($request);   
+        return true;
+    }
 
-        return redirect("/");
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array
+     */
+    public function rules()
+    {
+        return [
+            'titre' => 'required|min:3|max:40',
+            'image' => 'required|image',
+            'texte' => 'required|min:50',
+            'tags' => 'required',
+            'categorie' =>  'required'
+        ];
+    }
+    public function messages(){
+        return [
+            'titre.required' => 'Le titre doit etre requis, minimum 10 et maximum 40.',
+            'image.required' => 'Le fichier doit être une image',
+            'texte.required' => 'Le champs est requis, minimum 50 caractères',
+            'tags[].required' => 'Un tag minimum est requis.',
+            'categorie.required' => 'La categorie est requis.'
+        ];
     }
 }
+

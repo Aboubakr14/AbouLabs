@@ -36,7 +36,7 @@ class TestimonialRequest extends FormRequest
             'auteur.required' => 'Le nom d\'auteur est de minimum 10 et maximum 50 caractères.',
             'fonction.required' => 'Le fonction est de minimum 10 et maximum 25 caractères.',
             'texte.required' => 'Le champ de texte est de minmum 30 et maximum 250 caractères.',
-            'image.required' => 'L\'image est requis au format min 250x250 et max 250x250'
+            'image.required' => 'L\'image est requis au format 500X500'
         ];
     }
 }
