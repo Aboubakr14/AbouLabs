@@ -37,7 +37,7 @@ class HomeRequest extends FormRequest
     public function messages(){
         return [
             'logo.required' => 'Le logo doit etre une image et doit etre 120px sur 35px Max.',
-            'logo_carousel.required' => 'L\'image est requis ',
+            'logo_carousel.required' => 'L\'image est requises ',
             'texte_carousel.required' => 'Le champ texte carousel est requis et maximum 50 caracteres',
             'texte_droite.required' => 'Le champ texte de gauche est requis et maximum 250 caracteres',
             'texte_gauche.required' => 'Le champ texte de droite est requis et maximum 250 caracteres',
