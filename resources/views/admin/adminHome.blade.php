@@ -22,7 +22,7 @@
         @endif
         <form action="{{url('/home/index/update')}}" method="POST" enctype="multipart/form-data">    
             @csrf
-            @method('')
+            @method('put')
             <div class="form-group">
                 <label for="logo">Logo qui se situe dans la nav</label>
                 <input type="file" class="form-control" name="logo" id="logo">
