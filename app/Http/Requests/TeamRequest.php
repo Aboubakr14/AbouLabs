@@ -26,7 +26,6 @@ class TeamRequest extends FormRequest
         return [
             'nom' => 'required|required|min:5|max:50',
             'fonction' => 'required|required|min:3|max:25',
-            // 'image' => 'required|image'
         ];
     }
     public function messages()

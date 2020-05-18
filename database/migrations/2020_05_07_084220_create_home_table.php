@@ -15,12 +15,12 @@ class CreateHomeTable extends Migration
     {
         Schema::create('home', function (Blueprint $table) {
             $table->Increments('id');
-            $table->string('logo',125);
-            $table->string('logo_carousel',125);
-            $table->string('texte_carousel',125);
-            $table->string('texte_gauche',125);
-            $table->string('texte_droite',125);
-            $table->string('url_video',125);
+            $table->string('logo',255);
+            $table->string('logo_carousel',255);
+            $table->string('texte_carousel',255);
+            $table->string('texte_gauche',255);
+            $table->string('texte_droite',255);
+            $table->string('url_video',255);
             $table->timestamps();
         });
     }
