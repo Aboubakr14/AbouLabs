@@ -384,14 +384,4 @@ Route::post('/newsletter',function(NewsletterRequest $request){
         ->withErrors('newsletter','Erreur');
 
 });
-// Auth::routes();
 
-// Route::get('/home', 'HomeController@index')->name('home');
-
-// Auth::routes();
-
-// Route::get('/home', 'HomeController@index')->name('home');
-
-// Auth::routes();
-
-// Route::get('/home', 'HomeController@index')->name('home');

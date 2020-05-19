@@ -97,7 +97,7 @@ class ArticleController extends Controller
 
         //Si l'user qui créé un poste est un editeur, envoi un mail chez l'admin
         if(auth()->user()->role == "editeur")
-            Mail::to('exemple@exmple.com')->send(new ArticleValidation($user));
+            Mail::to(request('exemple@exmple.com'))->send(new ArticleValidation($user));
         else
             return redirect(url('/sendNewArticle',$article->id));
 

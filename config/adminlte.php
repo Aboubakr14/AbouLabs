@@ -210,7 +210,7 @@ return [
                     'url' => 'users/create'
                 ],
                 [
-                    'text' => 'Afficher les users du site',
+                    'text' => 'Afficher les membres du site',
                     'icon' => 'fas fa-user',
                     'url' => 'users',
                     'can' => 'admin'
@@ -234,7 +234,7 @@ return [
             'can' => 'admin',
         ],
         [
-            'text' => 'Contenu Textuel',
+            'text' => 'Contenu de la page principal',
             'icon' => 'fas fa-pencil-alt',
             'url' => '/home/index/edit',
             'can' => 'admin',
@@ -275,7 +275,7 @@ return [
             ]
         ],
         [
-            'text' => 'Section Team',
+            'text' => 'Team',
             'icon' => 'fas fa-users',
             'can' => 'admin',
             'submenu' => [
@@ -292,7 +292,7 @@ return [
             ]
         ],
         [
-            'text' => 'Section Contact',
+            'text' => 'Contact',
             'icon' => 'fas fa-address-card',
             'url' => '/home/contact/edit',
             'can' => 'admin',
